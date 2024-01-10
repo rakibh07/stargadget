@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* import font: cdn */
+/* @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap'); */
+
+/* import font: local (alt) */
+/* @font-face {
+  font-family: trebuchet;
+  src: url("../assets/fonts/trebuc.ttf") format("opentype");
+} */
+
+/* import font: local */
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: normal;
+  src: local("../assets/fonts/trebuc.ttf"),
+    url("../assets/fonts/trebuc.ttf") format("ttf");
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/* override: font */
+* {
+  font-family: "Trebuchet MS" !important;
+}
+a {
+  color: inherit !important;
+}
+
+/* menu  : */
+.ant-menu-title-content:hover,
+.ant-menu-title-content:hover > * {
+  color: #ef4a23;
+  transition-duration: 0s;
+  transition-delay: 0s;
+  transition-timing-function: unset;
+}
+.ant-menu-submenu-popup > ul {
+  margin-top: -11px !important;
+  border-top: 3px solid #ef4a23;
+}
+.ant-menu-submenu-popup > ul {
+  border-radius: 0 !important;
+}
+.ant-menu-title-content,
+.ant-menu-title-content:hover {
+  color: black;
+}
+.ant-menu-submenu-popup > ul > li .ant-menu-title-content:hover {
+  color: white;
+}
+
+/*  menu: responsive drawer */
+@media only screen and (max-width: 1280px) {
+  .ant-menu-title-content:hover {
+    color: #ef4a23;
+  }
+  .ant-menu-submenu-title {
+    margin: 0 !important;
+  }
+  .ant-menu-item,
+  .ant-menu-submenu > div {
+    padding-block: 22px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: transparent !important;
+  }
+}
+
+/* drawer */
+.ant-drawer-body {
+  padding: 0 !important;
+}
+
+/*  Carousel button override */
+.slick-dots > li > button {
+  border-radius: 0px !important;
+}
+.slick-dots > .slick-active > button {
+  background-color: #ef4a23 !important;
+}
+
+/* placeholder: input */
+::-webkit-input-placeholder {
+  font-size: 15px;
+  color: gray !important;
+}
+
+/* placeholder: ant select*/
+.ant-select-selection-placeholder {
+  font-size: 15px;
+  color: gray !important;
+  margin-top: 1px !important;
+}
+
+/* checkbox: input */
+.ant-checkbox-inner {
+  border-color: gray !important;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  border-color: #3749bb !important;
+  background-color: #3749bb !important;
+}
+
+/* override styles: ant-pagination */
+.ant-pagination > li {
+  border-radius: 0.25rem !important;
+  border: none !important;
+  color: black !important;
+}
+.ant-pagination
+  > li:hover:not([aria-disabled="true"], .ant-pagination-total-text) {
+  background-color: #ef4a23 !important;
+}
+.ant-pagination > li:not([aria-disabled="true"]):hover > a,
+.ant-pagination-item-active > a {
+  color: white !important;
+  text-decoration: underline;
+}
+.ant-pagination-total-text {
+  position: absolute;
+  right: 0;
+}
+@media only screen and (max-width: 1280px) {
+  .ant-pagination-total-text {
+    display: none !important;
+  }
+}
+
+/* input: input-number */
+.ant-input-number-group-addon {
+  border-radius: 0 !important;
+}
+.ant-input-number-input {
+  text-align: center !important;
+}
+
+/* input: form-label */
+.ant-form-item-label > label {
+  height: 0 !important;
+}
